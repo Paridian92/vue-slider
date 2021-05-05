@@ -11,6 +11,10 @@ const app = new Vue({
       'assets/img/muratore.jpg',
       'assets/img/spaccio.jpg',]
   },
+  mounted: function(){
+    setInterval(this.nextPhoto, 3000);
+
+  },
 
   methods:{
     nextPhoto(){
@@ -21,9 +25,7 @@ const app = new Vue({
       this.counterPhoto--;
       if(this.counterPhoto < 0 ) this.counterPhoto = this.images.length -1; 
     },
-    autoplay(){
-      setTimeout(nextPhoto, 3000);
-    },
+    
   }
 
 
