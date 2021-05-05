@@ -1,0 +1,62 @@
+/* classi generali/riutilizzabili */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: brown;
+}
+
+.wrapper{
+    position: relative;
+    height: 80%;
+    width: 80%;
+    
+}
+
+.wrapper .images img{
+    width: 100%;
+
+}
+
+.wrapper .images i{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    cursor:pointer;
+}
+
+.prev{
+    left:-25px;
+}
+
+.next{
+    right: -25px;
+}
+
+.puntini{
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+    width: 50%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 99px;
+}
+
+.puntini i{
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.active{
+    color: white;
+}

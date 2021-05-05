@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Il futuro dopo Boolean</title>
+    </head>
+    <body>
+    
+    <div id="app">
+
+        <div class="container">
+
+            <div class="wrapper">
+
+                <div class="images">
+                    
+                    <i class="fas fa-chevron-left prev"
+                       @click="counterPhoto--"> </i>
+
+                    <img :src='images[counterPhoto]' alt="">
+
+                    <i @click="nextPhoto" 
+                        class="fas fa-chevron-right next"></i>
+
+                    
+                </div>
+                <div class ="puntini">
+
+                    <i 
+                    class ="fas fa-circle"
+                    v-for ="(numero, indice) in images.length"
+                    :class="(indice === counterPhoto) ? 'active' : null"
+                    @click=""></i>
+
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+    
+
+
+
+
+    
+    <script src="assets/js/main.js" charset="utf-8"></script>
+    </body>
+</html>
