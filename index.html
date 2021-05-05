@@ -20,12 +20,13 @@
                 <div class="images">
                     
                     <i class="fas fa-chevron-left prev"
-                       @click="counterPhoto--"> </i>
+                       @click="prevPhoto"> </i>
 
                     <img :src='images[counterPhoto]' alt="">
 
                     <i @click="nextPhoto" 
-                        class="fas fa-chevron-right next"></i>
+                        class="fas fa-chevron-right next"
+                        :class="autoplay"></i>
 
                     
                 </div>
@@ -33,9 +34,9 @@
 
                     <i 
                     class ="fas fa-circle"
-                    v-for ="(numero, indice) in images.length"
+                    v-for ="(photo, indice) in images.length"
                     :class="(indice === counterPhoto) ? 'active' : null"
-                    @click=""></i>
+                    @click="counterPhoto = indice"></i>
 
                     
                 </div>
